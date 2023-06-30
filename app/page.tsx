@@ -1,4 +1,5 @@
 import Button from '@/components/Button';
+import Link from 'next/link';
 
 async function getPosts() {
   const res = await fetch('http://localhost:3000/api/posts');
@@ -23,6 +24,7 @@ export default async function Home() {
       <main>Blog List Page</main>
       <h1>{posts}</h1>
       <Button />
+      <Link href={'/new'}>게시글 등록하러 가기</Link>
     </>
   );
 }
